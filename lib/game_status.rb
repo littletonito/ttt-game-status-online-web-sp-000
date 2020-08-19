@@ -31,8 +31,6 @@ end
 
 
 def full?(board)
-  WIN_COMBINATIONS.all? do |combo|
-    (board[combo[0]] && board[combo[1]] && board[combo[2]]) == "X" || "O"
+  board.all? { |token| token == "X" || "O"  }
 
-  end
 end
